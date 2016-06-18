@@ -1,0 +1,9 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -0,6 +0,7 @@
+    <!--- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
++	<title>Ceevee - Free Responsive HTML5/CSS3 Template</title>
+ 	<meta name="description" content="">
+ 	<meta name="author" content="">
+ 
