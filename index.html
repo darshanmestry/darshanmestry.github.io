@@ -742,7 +742,9 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="location-map">
-                <div id="mapCanvas" class="map-canvas"> </div>
+                <div id="mapCanvas" class="map-canvas">  
+                   <div id="map" style="width:100%;height:350px"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -771,9 +773,29 @@
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
   <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
   <script src="assets/js/jquery.fitvids.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  
   <script src="assets/js/scripts.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(18.5204,73.8567); 
+  var mapOptions = {center: myCenter, zoom: 10};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+}
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwE5Fj66i2ew1SqAZNzZRORmZLgmxYzB8&callback=myMap"
+    async defer></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps-api-v3/api/js/27/2/common.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate"></script>
 </html>
